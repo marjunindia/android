@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Concurrency</string>
+    <string name="lorem_ipsum">Make your Android apps more efficient by managing processes in multiple threads. Although threads share resources, you can divide work so that tasks can be performed simultaneously. Still, programming multiple threads (aka concurrent programming) can be a challenge even for experienced developers. This course introduces concurrent programming concepts and techniques specific to Android.
+
+First, discover how to create and start simple background threads, and how to use handlers to manage a thread\'s message queue. Then, learn various methods for optimizing the scheduling and performance of background tasks in Android with AsyncTask, intent services, and the JobScheduler API. Plus, explore tools that help you implement multithreading for different tasks in Android: Loader, for asynchronous data loading, and the open-source API Retrofit, for making HTTP requests.
+Make your Android apps more efficient by managing processes in multiple threads. Although threads share resources, you can divide work so that tasks can be performed simultaneously. Still, programming multiple threads (aka concurrent programming) can be a challenge even for experienced developers. This course introduces concurrent programming concepts and techniques specific to Android.
+
+First, discover how to create and start simple background threads, and how to use handlers to manage a thread\'s message queue. Then, learn various methods for optimizing the scheduling and performance of background tasks in Android with AsyncTask, intent services, and the JobScheduler API. Plus, explore tools that help you implement multithreading for different tasks in Android: Loader, for asynchronous data loading, and the open-source API Retrofit, for making HTTP requests.
+
+Note: To get the most out of this course, you should be comfortable programming with Java, and should understand the most basic skills that are needed to build Android apps with the Android SDK and Android Studio.
+Note: To get the most out of this course, you should be comfortable programming with Java, and should understand the most basic skills that are needed to build Android apps with the Android SDK and Android Studio.</string>
+    <string name="title_activity_handler_activivty">HandlerActivivty</string>
+</resources>
