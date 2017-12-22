@@ -7,7 +7,9 @@ import javax.crypto.BadPaddingException;
  */
 
 public class BasicPrice {
+
     private static BasicPrice basicPrice = new BasicPrice();
+
     private float price;
 
     // Prevent more than one copy
