@@ -5,6 +5,10 @@ package com.example.arjun_mu.a10datafactorypattern;
  */
 
 public class Cheddar extends Cheese implements Filling {
+
+    // object of type cheese
+
+
     @Override
     public boolean isVeg() {
         return true;
