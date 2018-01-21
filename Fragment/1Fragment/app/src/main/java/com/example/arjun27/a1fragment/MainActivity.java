@@ -1,12 +1,10 @@
 package com.example.arjun27.a1fragment;
 
-import android.app.Fragment;
-import android.app.FragmentContainer;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-
-import static android.R.attr.fragment;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,11 +12,15 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String FRAGMENT_TAG = "fragment_tag";
 
+    TextView textView;
+
+    private  boolean mUseFragment;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        textView= (TextView) findViewById(R.id.textView2);
 
     }
 
@@ -60,5 +62,18 @@ public class MainActivity extends AppCompatActivity {
                     .commit();
         }
 
+    }
+
+    public void measurehandler(View view) {
+        Screenutility screenutility=new Screenutility(this);
+        textView.setText(String.format("Width: %s,Height:%s",screenutility.getDpWidth(),screenutility.getDpHeight()));
+
+        if(screenutility.getDpWidth()>=820){
+            mUseFragment=true;
+        }else{
+            mUseFragment=false;
+        }
+
+        Toast.makeText(this, "Using fragment ? "+mUseFragment, Toast.LENGTH_SHORT).show();
     }
 }
