@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         // Switch : Toasted
-        if (toasted.isChecked()) {
+            if (toasted.isChecked()) {
             Toasted t = new Toasted(bread);
             toast = t.getDecoration();
             extraKcal += t.getDecorationKcal();
@@ -74,6 +74,15 @@ public class MainActivity extends AppCompatActivity {
         // Switch : Salt
         if (salt.isChecked()) {
             sandwich = builder.build(sandwich, new Salt());
+        }
+
+        // Switch : Toasted
+        if (toasted.isChecked()) {
+            Toasted t = new Toasted(bread);
+            toast = t.getDecoration();
+            extraKcal += t.getDecorationKcal();
+        } else {
+            toast = "";
         }
 
         // Display output
