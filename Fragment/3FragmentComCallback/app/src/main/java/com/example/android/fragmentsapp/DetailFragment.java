@@ -51,12 +51,15 @@ public class DetailFragment extends Fragment {
         String fn = textFirstName.getText().toString();
         String ln = textLastName.getText().toString();
         int age = Integer.valueOf(textAge.getText().toString());
-        mFragmentListener.onFragmentFinish(fn, ln, age);
+        Person person=new Person(fn,ln,age);
+
+
+        mFragmentListener.onFragmentFinish(person);
 
     }
 
     public interface FragmentListener {
-        public void onFragmentFinish(String firstName, String lastName, int age);
+        public void onFragmentFinish(Person person);
     }
 
 }

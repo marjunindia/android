@@ -59,8 +59,8 @@ public class MainActivity extends AppCompatActivity implements DetailFragment.Fr
     }
 
     @Override
-    public void onFragmentFinish(String firstName, String lastName, int age) {
-        Log.d(TAG, "onFragmentFinish() called with: firstName = [" + firstName + "], lastName = [" + lastName + "], age = [" + age + "]");
+    public void onFragmentFinish(Person person ) {
+        Log.d(TAG, "onFragmentFinish() called with: firstName = [" + person.getFirstName() + "], lastName = [" + person.getLastName() + "], age = [" + person.getAge() + "]");
 
         // find fragment from activity
         DetailFragment detailFragment= (DetailFragment) getSupportFragmentManager().findFragmentById(R.id.detail_fragment_container);
