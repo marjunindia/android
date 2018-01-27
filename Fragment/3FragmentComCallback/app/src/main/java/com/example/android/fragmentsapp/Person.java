@@ -1,6 +1,12 @@
 package com.example.android.fragmentsapp;
 
-public class Person {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class Person implements Parcelable {
+
+    // http://www.parcelabler.com
+
     private String firstName;
     private String lastName;
     private int age;
@@ -37,4 +43,35 @@ public class Person {
     public void setAge(int age) {
         this.age = age;
     }
+
+    protected Person(Parcel in) {
+        firstName = in.readString();
+        lastName = in.readString();
+        age = in.readInt();
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(firstName);
+        dest.writeString(lastName);
+        dest.writeInt(age);
+    }
+
+    @SuppressWarnings("unused")
+    public static final Parcelable.Creator<Person> CREATOR = new Parcelable.Creator<Person>() {
+        @Override
+        public Person createFromParcel(Parcel in) {
+            return new Person(in);
+        }
+
+        @Override
+        public Person[] newArray(int size) {
+            return new Person[size];
+        }
+    };
 }

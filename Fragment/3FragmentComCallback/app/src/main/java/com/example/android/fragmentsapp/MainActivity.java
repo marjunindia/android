@@ -44,10 +44,14 @@ public class MainActivity extends AppCompatActivity implements DetailFragment.Fr
 
     private void viewDetailFragment() {
 
+        Person person=new Person("First name","Lastname",35);
+
         if (mTablet) {
             FragmentManager fragmentManager =
                     getSupportFragmentManager();
-            DetailFragment fragment = new DetailFragment();
+           // DetailFragment fragment = new DetailFragment();
+            DetailFragment fragment =DetailFragment.newInstance(person);   //sending obj from activitiy to fragment via parcable
+
             fragmentManager.beginTransaction()
                     .add(R.id.detail_fragment_container, fragment)
                     .commit();
