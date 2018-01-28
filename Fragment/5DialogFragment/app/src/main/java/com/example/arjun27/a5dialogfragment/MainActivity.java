@@ -17,4 +17,10 @@ public class MainActivity extends AppCompatActivity {
         alertDialogFragment.setCancelable(false);
         alertDialogFragment.show(getSupportFragmentManager(), "DIALOG_FRAGMENT");
     }
+
+    public void customdialog(View view) {
+        CustomDialogFragment customDialog=new CustomDialogFragment();
+        customDialog.show(getSupportFragmentManager(),"CUSTOM_FRAGMENT");
+
+    }
 }
