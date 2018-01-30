@@ -28,7 +28,7 @@ public class JavaScriptInterface {
 
     @JavascriptInterface
     public void newActivity(String toast) {
-        context.startActivity(new Intent(context,SecondActivity.class));
+        context.startActivity(new Intent(context,PageNavigation.class));
     }
 
 }
