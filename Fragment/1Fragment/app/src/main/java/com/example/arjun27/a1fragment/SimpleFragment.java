@@ -18,7 +18,7 @@ import android.widget.TextView;
 public class SimpleFragment extends Fragment {
 
 
-    private static final String TAG = "lifecycle";
+    private static final String TAG = " SimpleFraglifecycle";
     public static final String MESSAGE_KEY = "message_key";
 
     public SimpleFragment() {
